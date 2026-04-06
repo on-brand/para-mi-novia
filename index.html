@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi amor ❤️</title>
+<style>
+body{margin:0;height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;background:linear-gradient(135deg,#ffd1dc,#ffeef3);font-family:Arial,sans-serif;overflow:hidden}
+.heart{position:relative;width:120px;height:120px;background:#ff4d6d;transform:rotate(-45deg);animation:beat 1s infinite;cursor:pointer;box-shadow:0 10px 30px rgba(255,77,109,.4)}
+.heart:before,.heart:after{content:"";position:absolute;width:120px;height:120px;background:#ff4d6d;border-radius:50%}
+.heart:before{top:-60px;left:0}.heart:after{left:60px;top:0}
+@keyframes beat{0%,100%{transform:rotate(-45deg) scale(1)}50%{transform:rotate(-45deg) scale(1.15)}}
+.hint{margin-top:50px;font-size:24px;color:#b3003c;font-weight:bold;animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.message{display:none;max-width:600px;margin-top:40px;padding:25px;background:white;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,.15);text-align:center;font-size:24px;color:#444;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="heart" onclick="mostrarMensaje()"></div>
+<div class="hint">💌 Abre aquí 💌</div>
+<div class="message" id="mensaje">
+❤️ Mi amor, estoy muy orgulloso de ti. ❤️<br><br>
+Admiro tu fuerza, tu forma de luchar por lo que quieres y la persona tan hermosa que eres.
+Nunca olvides lo increíble que eres, porque yo siempre voy a creer en ti.
+✨ Eres mi orgullo, mi alegría y mi lugar favorito. ✨
+</div>
+<script>
+function mostrarMensaje(){
+document.getElementById('mensaje').style.display='block';
+document.querySelector('.hint').innerText='❤️ Para ti, mi vida ❤️';
+}
+</script>
+</body>
+</html>
